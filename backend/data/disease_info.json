@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Pepper Bell Bacterial Spot",
+    "description": "Bacterial spot is a severe disease affecting pepper plants. It is caused by Xanthomonas campestris pv. vesicatoria and spreads through contaminated seeds, rain splash, and infected plant debris. The disease thrives in warm, humid conditions, leading to significant yield losses. It manifests as small, water-soaked lesions that turn brown and develop a yellow halo, eventually causing leaf drop and exposing fruits to sunscald.",
+    "cause": "The bacterium Xanthomonas campestris pv. vesicatoria spreads through infected seeds, water splashes, and plant handling. Moisture and warm temperatures favor its growth.",
+    "symptoms": [
+      "Small, water-soaked spots on leaves with yellow halos.",
+      "Brown scabby lesions on fruit, reducing quality.",
+      "Defoliation leading to sunscald on fruits."
+    ],
+    "prevention": [
+      "Use disease-free seeds and transplants.",
+      "Rotate crops to avoid bacterial buildup in soil.",
+      "Apply copper-based bactericides preventatively."
+    ],
+    "solution": "Remove and destroy infected plants. Apply copper fungicides and avoid overhead irrigation.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/pepper_bacterial_spot.jpeg"
+  },
+  {
+    "name": "Potato Early Blight",
+    "description": "Early blight, caused by Alternaria solani, affects potato plants, leading to leaf spotting and premature defoliation. It spreads through wind, rain, and plant debris, thriving in warm, humid conditions.",
+    "cause": "The fungus Alternaria solani spreads through infected debris, wind, and water splashes.",
+    "symptoms": [
+      "Dark brown spots with concentric rings on lower leaves.",
+      "Leaves yellow and fall off prematurely.",
+      "Tuber lesions leading to quality loss."
+    ],
+    "prevention": [
+      "Crop rotation to minimize fungal spores.",
+      "Use certified, disease-free seed potatoes.",
+      "Apply fungicides as preventive measures."
+    ],
+    "solution": "Remove infected leaves and apply fungicides like chlorothalonil.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Potato_Early_Blight.jpeg"
+  },
+  {
+    "name": "Potato Late Blight",
+    "description": "Late blight is caused by Phytophthora infestans and spreads rapidly, leading to widespread crop destruction. The disease thrives in cool, wet conditions and can completely destroy a potato field within weeks.",
+    "cause": "The pathogen Phytophthora infestans spreads through airborne spores and infected plant material.",
+    "symptoms": [
+      "Dark water-soaked lesions on leaves, turning brown and necrotic.",
+      "White moldy growth on leaf undersides in humid conditions.",
+      "Dark, sunken lesions on tubers leading to decay."
+    ],
+    "prevention": [
+      "Plant resistant potato varieties.",
+      "Apply fungicides preventatively during wet weather.",
+      "Ensure proper spacing to improve air circulation."
+    ],
+    "solution": "Remove infected plants and apply copper fungicides regularly.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/potato_late_blight.jpeg"
+  },
+  {
+    "name": "Tomato Bacterial Spot",
+    "description": "Bacterial spot, caused by Xanthomonas species, affects tomato plants, leading to significant yield loss. It spreads through contaminated seeds and water splashes, thriving in warm, humid conditions.",
+    "cause": "The bacterium Xanthomonas spreads through infected seeds, plant debris, and rain splashes.",
+    "symptoms": [
+      "Small brown spots on leaves with yellow halos.",
+      "Lesions on stems and fruit calyx.",
+      "Slightly raised, scabby spots on fruit."
+    ],
+    "prevention": [
+      "Use certified disease-free seeds.",
+      "Rotate crops to avoid bacterial buildup.",
+      "Apply copper-based bactericides preventatively."
+    ],
+    "solution": "Remove and destroy infected plants. Apply copper fungicides as a treatment.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_Bacterial_Spot.jpeg"
+  },
+  {
+    "name": "Tomato Early Blight",
+    "description": "Early blight, caused by Alternaria solani, is a common fungal disease that reduces tomato yield. It starts as dark circular spots on older leaves and spreads rapidly under humid conditions.",
+    "cause": "The fungus Alternaria solani spreads through wind, rain, and infected plant debris.",
+    "symptoms": [
+      "Dark brown spots with concentric rings on older leaves.",
+      "Leaves yellow and drop prematurely.",
+      "Sunken dark lesions on fruit near the stem end."
+    ],
+    "prevention": [
+      "Use resistant tomato varieties.",
+      "Apply fungicides preventatively in humid conditions.",
+      "Avoid overhead watering to reduce moisture buildup."
+    ],
+    "solution": "Remove infected leaves and apply fungicides like chlorothalonil.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/tomato_early_blight.jpeg"
+  },
+  {
+    "name": "Tomato Late Blight",
+    "description": "Late blight, caused by Phytophthora infestans, is a devastating disease affecting tomato plants. It spreads rapidly under cool, moist conditions, leading to severe crop losses.",
+    "cause": "The pathogen Phytophthora infestans spreads via airborne spores and infected plant material.",
+    "symptoms": [
+      "Dark, water-soaked lesions on leaves, turning brown and necrotic.",
+      "White fungal growth on leaf undersides in humid conditions.",
+      "Dark, sunken lesions on fruit, leading to decay."
+    ],
+    "prevention": [
+      "Plant resistant tomato varieties.",
+      "Apply fungicides preventatively during wet weather.",
+      "Ensure proper spacing for air circulation."
+    ],
+    "solution": "Remove infected plants and apply copper fungicides regularly.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_late_blight.jpeg"
+  },
+  {
+    "name": "Tomato Leaf Mold",
+    "description": "Leaf mold, caused by Passalora fulva, affects tomato plants grown in humid conditions, leading to leaf yellowing and reduced photosynthesis.",
+    "cause": "The fungus Passalora fulva spreads through spores, high humidity, and poor air circulation.",
+    "symptoms": [
+      "Yellowing leaves with velvety olive-green mold on undersides.",
+      "Leaf curling and eventual defoliation.",
+      "Reduced fruit production due to weakened plants."
+    ],
+    "prevention": [
+      "Ensure good ventilation and avoid high humidity.",
+      "Use resistant tomato varieties.",
+      "Apply fungicides like copper-based sprays."
+    ],
+    "solution": "Remove affected leaves and improve air circulation. Use fungicides if necessary.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_Leaf_Mold.jpeg"
+  },
+  {
+    "name": "Tomato Septoria Leaf Spot",
+    "description": "Septoria leaf spot, caused by Septoria lycopersici, is a fungal disease that affects tomato plants, causing defoliation and reducing yield.",
+    "cause": "The fungus Septoria lycopersici spreads through rain splash, contaminated tools, and infected plant debris.",
+    "symptoms": [
+      "Small, dark spots with gray centers on lower leaves.",
+      "Leaves turn yellow and drop prematurely.",
+      "Defoliation leads to reduced fruit yield and sunscald."
+    ],
+    "prevention": [
+      "Rotate crops to reduce fungal spores in soil.",
+      "Avoid overhead watering to prevent moisture buildup.",
+      "Apply fungicides preventatively."
+    ],
+    "solution": "Remove infected leaves and apply fungicides like chlorothalonil.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_Septoria_Leaf_Spot.jpeg"
+  },
+  {
+    "name": "Tomato Spider Mites Two-Spotted Spider Mite",
+    "description": "Spider mites are tiny pests that suck plant sap, causing leaf damage and reducing tomato plant health.",
+    "cause": "Spider mites spread through dry, dusty conditions and infest plants via wind and contaminated tools.",
+    "symptoms": [
+      "Yellowing and speckled leaves with fine webbing underneath.",
+      "Leaves dry out and drop prematurely.",
+      "Weakened plants produce smaller fruit."
+    ],
+    "prevention": [
+      "Maintain proper humidity to deter mites.",
+      "Introduce natural predators like ladybugs.",
+      "Regularly spray plants with water to dislodge mites."
+    ],
+    "solution": "Use neem oil or insecticidal soap to control mite infestations.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_Spider_Mites_Two-Spotted_Spider_Mite.jpeg"
+  },
+  {
+    "name": "Tomato Target Spot",
+    "description": "Target spot, caused by Corynespora cassiicola, affects tomato plants, leading to leaf damage and reduced fruit production.",
+    "cause": "The fungus Corynespora cassiicola spreads through wind, rain, and infected plant debris.",
+    "symptoms": [
+      "Circular brown spots with concentric rings on leaves.",
+      "Severe infections cause leaves to drop prematurely.",
+      "Dark lesions on stems and fruits."
+    ],
+    "prevention": [
+      "Use resistant tomato varieties.",
+      "Apply fungicides preventatively.",
+      "Ensure proper plant spacing for air circulation."
+    ],
+    "solution": "Remove affected leaves and apply fungicides like chlorothalonil.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_Target_Spot.jpeg"
+  },
+  {
+    "name": "Tomato Yellow Leaf Curl Virus",
+    "description": "Tomato yellow leaf curl virus (TYLCV) is a viral disease transmitted by whiteflies, causing severe stunting and leaf curling in tomato plants.",
+    "cause": "The virus is spread by whiteflies feeding on infected plants.",
+    "symptoms": [
+      "Leaves curl upward and turn yellow.",
+      "Stunted plant growth with reduced fruit production.",
+      "Thickened, brittle leaves."
+    ],
+    "prevention": [
+      "Control whitefly populations with insecticides or traps.",
+      "Use resistant tomato varieties.",
+      "Remove infected plants to prevent spread."
+    ],
+    "solution": "Use insecticidal soap or neem oil to control whiteflies and prevent further infection.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_yellow_leaf_curl_virus.jpeg"
+  },
+  {
+    "name": "Tomato Mosaic Virus",
+    "description": "Tomato mosaic virus (ToMV) is a highly contagious virus that causes mottling, stunted growth, and reduced fruit quality in tomato plants.",
+    "cause": "The virus spreads through contaminated seeds, tools, and human handling.",
+    "symptoms": [
+      "Mottled yellow and green leaves.",
+      "Leaf curling and stunted plant growth.",
+      "Distorted or poorly developed fruit."
+    ],
+    "prevention": [
+      "Use certified virus-free seeds.",
+      "Sanitize tools and hands after handling plants.",
+      "Remove infected plants immediately."
+    ],
+    "solution": "No cure exists. Prevent infection by using virus-free seeds and practicing proper sanitation.",
+    "link": "https://www.youtube.com/watch?v=dKAjQ-Gy-aM",
+    "image": "/media/disease-info/Tomato_mosaic_virus.jpeg"
+  }
+]

@@ -14,7 +14,7 @@ const WeatherCard = () => {
   const fetchWeather = async (lat, lon) => {
     try {
       setLoading(true);
-      const key = import.meta.env.VITE_OPENWEATHER_KEY;   // put your key in .env
+      const key = import.meta.env.VITE_OPENWEATHER_KEY;  
       const params = { lat, lon, units: "metric", appid: key };
 
       const wRes  = await axios.get("https://api.openweathermap.org/data/2.5/weather",  { params });

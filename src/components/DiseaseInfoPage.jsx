@@ -5,7 +5,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import PDFReport from "./PdfButton";
 import { FaDownload } from "react-icons/fa";
 
-const BASE_URL = "http://127.0.0.1:5000"; // Base URL for media files
+const BASE_URL = "http://127.0.0.1:5000"; 
 
 const DiseaseInfoPage = () => {
   const { diseaseName } = useParams();

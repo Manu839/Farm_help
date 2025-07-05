@@ -50,28 +50,28 @@ cd backend
 pip install -r requirements.txt
 python app.py
 
-##🧠 ML Models and Algorithms
+## 🧠 ML Models and Algorithm
 
-###1. Plant Disease Detection
+### 1. Plant Disease Detection
 Algorithm Used: Convolutional Neural Network (CNN)
 Framework: TensorFlow or PyTorch
 Dataset: PlantVillage dataset (common choice)
 Output: Class label like Tomato___Leaf_Mold, Potato___Early_Blight, or Healthy
 
-###2. Crop Recommendation
+### 2. Crop Recommendation
 Algorithm Used: Random Forest Classifier
 Input Features: N (Nitrogen), P (Phosphorus), K (Potassium), temperature, humidity, pH, rainfall
 Output: Suggested crop name (e.g., Rice, Maize, Cotton)
 Dataset: Collected from public agriculture datasets (like Kaggle's crop recommendation data)
 
-###3. Fertilizer Recommendation
+### 3. Fertilizer Recommendation
 Algorithm Used: Random Forest Classifier
 Input Features: Crop name, soil nutrients, moisture
 Output: Recommended NPK-based fertilizer and dosage
 Note: Can be improved using supervised learning (SVM/Random Forest)
 
 
-##🚀 Future Improvements
+## 🚀 Future Improvements
 
 Multi-language support
 Disease severity detection

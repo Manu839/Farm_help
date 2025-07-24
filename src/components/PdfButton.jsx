@@ -1,5 +1,4 @@
 import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-import { useTranslation } from 'react-i18next';
 
 // Create styles
 const styles = StyleSheet.create({

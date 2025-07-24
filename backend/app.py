@@ -1,5 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import joblib
+from PIL import Image
+import io
+import torch
+
+# Custom imports
 from model_utils import (
     load_model,
     preprocess,
@@ -7,18 +13,17 @@ from model_utils import (
     load_crop_model,
     load_fertilizer_model
 )
-from PIL import Image
-import io
-import torch
 
+# Initialize Flask app
 app = Flask(__name__)
 CORS(app)
 
+# Load ML models
 plant_model = load_model()
 crop_model = load_crop_model()
 fertilizer_model = load_fertilizer_model()
 
-# Crop Recommendation 
+# ---------------- Crop Recommendation ---------------- #
 @app.route('/api/recommend_crop', methods=['POST'])
 def recommend_crop():
     try:
@@ -35,9 +40,9 @@ def recommend_crop():
         crop = crop_model.predict(features)[0]
         return jsonify({"recommended_crop": crop})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": f"Crop recommendation failed: {str(e)}"}), 500
 
-# Plant Disease Prediction
+# ---------------- Plant Disease Prediction ---------------- #
 @app.route('/api/predict_disease', methods=['POST'])
 def predict_disease():
     try:
@@ -49,20 +54,23 @@ def predict_disease():
         prediction = decode_prediction(output)
         return jsonify({"predicted_disease": prediction})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": f"Disease prediction failed: {str(e)}"}), 500
 
-# Fertilizer Recommendation 
+# ---------------- Fertilizer Recommendation ---------------- #
 @app.route('/api/recommend_fertilizer', methods=['POST'])
 def recommend_fertilizer():
     try:
         data = request.get_json()
 
+        # Load encoders
         soil_encoder = joblib.load("model_files/soil_encoder.pkl")
         crop_encoder = joblib.load("model_files/crop_encoder.pkl")
 
+        # Encode categorical inputs
         encoded_soil = soil_encoder.transform([data['Soil Type']])[0]
         encoded_crop = crop_encoder.transform([data['Crop Type']])[0]
 
+        # Prepare feature vector
         features = [[
             float(data['Temperature']),
             float(data['Humidity']),
@@ -77,11 +85,13 @@ def recommend_fertilizer():
         prediction = fertilizer_model.predict(features)[0]
         return jsonify({"recommended_fertilizer": prediction})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": f"Fertilizer recommendation failed: {str(e)}"}), 500
 
+# ---------------- Root Endpoint ---------------- #
 @app.route('/')
 def home():
     return "backend is running 🚜"
 
+# ---------------- Run Server ---------------- #
 if __name__ == '__main__':
     app.run(debug=True)

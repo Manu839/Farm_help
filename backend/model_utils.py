@@ -7,7 +7,7 @@ import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 
-# 🧠 CNN for Plant Disease
+# ------------------ 🧠 CNN for Plant Disease ------------------ #
 class PlantDiseaseCNN(torch.nn.Module):
     def __init__(self, num_classes=15):
         super(PlantDiseaseCNN, self).__init__()
@@ -27,7 +27,7 @@ class PlantDiseaseCNN(torch.nn.Module):
         x = self.fc2(x)
         return x
 
-# Class Labels
+# Class labels for disease prediction
 class_labels = [
     'Pepper Bell Bacterial Spot', 'Pepper Bell Healthy', 'Potato Early Blight',
     'Potato Late Blight', 'Potato Healthy', 'Tomato Bacterial Spot', 'Tomato Early Blight',
@@ -38,6 +38,7 @@ class_labels = [
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# ------------------ 🔄 Load Plant Disease Model ------------------ #
 def load_model():
     model = PlantDiseaseCNN(num_classes=15)
     model.load_state_dict(torch.load("model_files/model.pth", map_location=device))
@@ -45,6 +46,7 @@ def load_model():
     model.eval()
     return model
 
+# ------------------ 🧼 Preprocess Image ------------------ #
 def preprocess(image):
     transform = transforms.Compose([
         transforms.Resize((128, 128)),
@@ -57,50 +59,62 @@ def preprocess(image):
     ])
     return transform(image).unsqueeze(0).to(device)
 
+# ------------------ 🧾 Decode Prediction ------------------ #
 def decode_prediction(pred_tensor):
     idx = torch.argmax(pred_tensor, dim=1).item()
     return class_labels[idx] if idx < len(class_labels) else "Unknown"
 
-# Train Crop Recommendation Model
+# ------------------ 🌾 Load or Train Crop Model ------------------ #
 def load_crop_model():
     model_path = "model_files/CropRecommendation.pkl"
-    if os.path.exists(model_path):
-        return joblib.load(model_path)
-    else:
-        df = pd.read_csv("model_files/Crop_recommendation.csv")
-        X = df.drop('label', axis=1)
-        y = df['label']
-        model = RandomForestClassifier(n_estimators=100, random_state=42)
-        model.fit(X, y)
-        joblib.dump(model, model_path)
-        return model
-# Train Ferti Recommendation Model
+    try:
+        if os.path.exists(model_path):
+            return joblib.load(model_path)
+    except Exception as e:
+        print(f"[⚠️] Failed to load crop model ({e}). Retraining...")
+
+    # Train model if loading fails
+    df = pd.read_csv("model_files/Crop_recommendation.csv")
+    X = df.drop('label', axis=1)
+    y = df['label']
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X, y)
+    joblib.dump(model, model_path)
+    print("[✅] Crop model trained and saved.")
+    return model
+
+# ------------------ 🧪 Load or Train Fertilizer Model ------------------ #
 def load_fertilizer_model():
     model_path = "model_files/FertilizerRecommendation.pkl"
-    if os.path.exists(model_path):
-        return joblib.load(model_path)
-    else:
-        df = pd.read_csv("model_files/Fertilizer.csv")
+    soil_enc_path = "model_files/soil_encoder.pkl"
+    crop_enc_path = "model_files/crop_encoder.pkl"
 
-       
-        df.rename(columns=lambda x: x.strip(), inplace=True)
-        print("Cleaned Columns:", df.columns.tolist()) 
+    try:
+        if os.path.exists(model_path):
+            return joblib.load(model_path)
+    except Exception as e:
+        print(f"[⚠️] Failed to load fertilizer model ({e}). Retraining...")
 
-        from sklearn.preprocessing import LabelEncoder
-        le_soil = LabelEncoder()
-        le_crop = LabelEncoder()
-        df["Soil Type"] = le_soil.fit_transform(df["Soil Type"])
-        df["Crop Type"] = le_crop.fit_transform(df["Crop Type"])
+    # Train model if loading fails
+    df = pd.read_csv("model_files/Fertilizer.csv")
+    df.rename(columns=lambda x: x.strip(), inplace=True)
+    print("[ℹ️] Cleaned Columns:", df.columns.tolist())
 
-        X = df.drop(columns=["Fertilizer"])
-        y = df["Fertilizer"]
+    le_soil = LabelEncoder()
+    le_crop = LabelEncoder()
 
-        model = RandomForestClassifier(n_estimators=100, random_state=42)
-        model.fit(X, y)
+    df["Soil Type"] = le_soil.fit_transform(df["Soil Type"])
+    df["Crop Type"] = le_crop.fit_transform(df["Crop Type"])
 
-        joblib.dump(model, model_path)
-        joblib.dump(le_soil, "model_files/soil_encoder.pkl")
-        joblib.dump(le_crop, "model_files/crop_encoder.pkl")
+    X = df.drop(columns=["Fertilizer"])
+    y = df["Fertilizer"]
 
-        return model
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X, y)
 
+    joblib.dump(model, model_path)
+    joblib.dump(le_soil, soil_enc_path)
+    joblib.dump(le_crop, crop_enc_path)
+
+    print("[✅] Fertilizer model and encoders trained and saved.")
+    return model

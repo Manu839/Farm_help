@@ -35,7 +35,7 @@ Farm Help is an AI-powered web application built to support farmers by offering 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/farm-help.git
+git clone https://github.com/Manu839/Farm_help.git
 cd farm-help
 ```
 

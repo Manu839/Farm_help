@@ -11,6 +11,16 @@ Farm Help is an AI-powered web application built to support farmers by offering 
 - 🧪 **Fertilizer Suggestions** – Recommendations based on crop and soil needs.
 - 🤝 **Connect to Experts** – Get professional agricultural advice.
 
+## Results
+
+<img width="1340" height="855" alt="image" src="https://github.com/user-attachments/assets/f456db6a-b262-4c1e-abc3-6796c5951152" />
+
+<img width="1342" height="843" alt="2" src="https://github.com/user-attachments/assets/736a85ac-8b4e-43e8-8aed-e4e2454ab2d3" />
+
+<img width="1340" height="855" alt="image" src="https://github.com/user-attachments/assets/b2271d4e-273c-41a5-999b-2dccc828f0f0" />
+
+<img width="1340" height="855" alt="4" src="https://github.com/user-attachments/assets/3e52968b-0c3b-451c-8a56-03f7c333b533" />
+
 ## 🛠️ Tech Stack
 
 ### **Frontend**

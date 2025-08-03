@@ -19,7 +19,8 @@ Farm Help is an AI-powered web application built to support farmers by offering 
 
 <img width="1342" height="843" alt="2" src="https://github.com/user-attachments/assets/736a85ac-8b4e-43e8-8aed-e4e2454ab2d3" />
 
-<img width="1340" height="855" alt="image" src="https://github.com/user-attachments/assets/b2271d4e-273c-41a5-999b-2dccc828f0f0" />
+<img width="1297" height="855" alt="Screenshot 2025-08-04 013938" src="https://github.com/user-attachments/assets/830e8dad-33c8-4600-a1f7-af5fce4e5bca" />
+
 
 
 ## 🛠️ Tech Stack
